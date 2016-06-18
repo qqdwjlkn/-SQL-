@@ -1,0 +1,43 @@
+//
+//  PrefixHeader.pch
+//  jjChat
+//
+//  Created by 丁益 on 16/4/3.
+//  Copyright © 2016年 jinjin. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+
+
+
+#ifdef DEBUG // 调试状态, 打开LOG功能
+#define DYLog(...) NSLog(__VA_ARGS__)
+#else // 发布状态, 关闭LOG功能
+#define DYLog(...)
+#endif
+
+// 颜色
+#define DYColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+
+// 随机色
+#define DYRandomColor DYColor(arc4random_uniform(256), arc4random_uniform(256), arc4random_uniform(256))
+
+// 全局背景色
+#define DYGlobalBg DYColor(211, 211, 211)
+
+// 屏幕尺寸
+#define DYScreenW [UIScreen mainScreen].bounds.size.width
+#define DYgetScreenSize [UIScreen mainScreen].bounds.size
+
+// 导航栏标题的字体
+#define DYNavigationTitleFont [UIFont boldSystemFontOfSize:20]
+
+// 是否大于等于iOS7系统
+#define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+
+#endif /* PrefixHeader_pch */
