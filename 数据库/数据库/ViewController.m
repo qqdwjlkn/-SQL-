@@ -11,7 +11,6 @@
 #import "MJExtension.h"
 #import "DYSaveHMUserTool.h"
 
-
 @interface ViewController ()
 
 @end
@@ -30,7 +29,7 @@
 - (void)operationHMUserTable{
     HMUser *user = [[HMUser alloc]init];
     user.name = @"小七1";
-    user.age = 14;
+    user.age = 18;
     user.sex = @"女";
     
     // 给表插入一列数据
